@@ -1,0 +1,10 @@
+build:
+  ci:
+     - docker build --rm=true --pull=true --force-rm=true --no-cache=true --tag=luckyraul/cron:latest .
+  push:
+     - docker push luckyraul/cron:latest
+integrations:
+    hub:
+      - integrationName: Docker
+        type: docker
+        agent_only: true
